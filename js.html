@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-basic</title>
+</head>
+<body>
+    
+
+    <script>
+        // assignment operators
+        var a = 5;
+        var b = 6;
+        var c = 7;
+        var d = 'vomacademy';
+
+        a += 6;
+        // a = a + 6;
+
+        
+
+        document.getElementById('result').innerHTML = a;
+
+        // arithmetic operators 
+
+        a++;
+        // a + 1;
+
+        // string operators
+        // 문자 + 숫자 => 숫자가 문자화되어 연결됨
+        // 숫자 + 숫자 + 문자 => 숫자끼리 계산 후 문자화되어 연결됨
+        // 문자 + 숫자 + 숫자 => 숫자까지 계산되지 않고 다 문자화되어 연결됨
+
+        // comparison operators
+        // if(조건) {
+        //     조건이 참일 때 실행되는 명령문
+        // };
+
+        if(a != b) {
+            document.getElementById('result').innerHTML = 'a와 b는 같지 않다.';
+        } else {
+            document.getElementById('result').innerHTML = 'a와 b는 같다.';
+        };
+        // === 데이터 타입과 형식이 다 같을 경우
+
+        // logical operators
+        // && 모든 조건이 true일 때
+        // || 하나의 조건이라도 true일 때 
+
+        var aa = 33;
+        var bb = 22;
+        var cc = 55;
+
+        if(a != b && aa < bb) {
+            document.getElementById('result').innerHTML = 'true';
+        } else {
+            document.getElementById('result').innerHTML = 'false';
+        };
+        
+        // ternary operators
+        // 조건 ? true: false;
+
+        var dd = aa > 19 ? '성인': '미성년자';
+        document.getElementById('result').innerHTML = dd;
+
+        // type operators
+        // instanceof 클래스에 속하거나 상속 여부에 따라 true, false 값을 반환
+
+        // 반복문
+        // for(i = 0; i < 10; i++) {
+        //     실행문
+        // };
+
+        for(i = 0; i < 10; i++) {
+           aa = aa + 10;
+        };
+        document.getElementById('result').innerHTML = aa;
+
+        // function 함수이름() { 실행문 }  실행 하고자 할 때 함수를 호출=> 함수이름();
+        // 한 번 선언하면 여러번 재사용 가능
+
+        function multiply() {
+            aa = aa * 100;
+            document.getElementById('result').innerHTML = aa;
+        }
+
+        multiply(); // 함수 호출
+
+
+    </script>
+</body>
+</html>
