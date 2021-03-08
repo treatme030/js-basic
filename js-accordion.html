@@ -18,18 +18,15 @@
     }
     svg { width: 24px; height: 24px; fill: rgb(255,255,255); transform: rotate(45deg); transition:  all .4s;}
 
-    .faq { width: 100%; height: 900px; background-color: rgb(0,0,0); color: rgb(255,255,255); padding-top: 60px;}
+    .faq { width: 100%; max-height: 900px; background-color: rgb(0,0,0); color: rgb(255,255,255); padding-top: 60px;}
     .faq-ul { width: 100%; max-width: 1000px; margin: 0 auto; padding:60px 0;}
     .faq-ul li div { background-color: rgb(48,48,48); display: flex; justify-content: space-between; height: 60px; align-items: center; padding: 0 30px;}
-    .faq-ul li { margin-bottom: 10px; overflow: hidden; height: 60px; transition: all .5s;}
+    .faq-ul li { margin-bottom: 10px; overflow: hidden; max-height: 60px; transition: all .5s;}
     .faq-ul li div h3 { font-family: 'Noto Sans'; font-size: 26px; line-height: 26px;}
     .faq-ul li p { background-color: rgb(48,48,48); margin-top: 2px; padding: 30px; font-family: 'Noto Sans'; font-size-adjust: 18px; line-height: 26px; word-break: keep-all;}
     .faq-title {font-family: 'Noto Sans'; font-size: 48px; line-height: 48px; text-align: center; }
 
-    @keyframes aniOpen {
-        0% { height: 60px;}
-        100% { height: auto;}
-    }
+    
 
 
 
@@ -39,7 +36,7 @@
         <h2 class="faq-title">자주 묻는 질문</h2>
         <ul class="faq-ul">
             <li class="faq-1">
-                <div class="faq-1-q" onclick="contentOpen();">
+                <div class="faq-1-q" onclick="contentOpen(0);">
                     <h3>넷플릭스란 무엇인가요?</h3>
                     <svg id="thin-x" viewBox="0 0 26 26" class="faq-1-svg" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                 </div>
@@ -50,7 +47,7 @@
                 </p>
             </li>
             <li class="faq-2">
-                <div class="faq-2-q">
+                <div class="faq-2-q" onclick="contentOpen(1);">
                     <h3>넷플릭스란 요금은 얼마인가요?</h3>
                     <svg id="thin-x" viewBox="0 0 26 26" class="" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                 </div>
@@ -59,7 +56,7 @@
                 </p>
             </li>
             <li class="faq-3">
-                <div class="faq-3-q">
+                <div class="faq-3-q" onclick="contentOpen(2);">
                     <h3>어디서 시청할 수 있나요?</h3>
                     <svg id="thin-x" viewBox="0 0 26 26" class="" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                 </div>
@@ -71,7 +68,7 @@
             </li>
             
             <li class="faq-4">
-                <div class="faq-4-q">
+                <div class="faq-4-q" onclick="contentOpen(3);">
                     <h3>멤버십을 해지하려면 어떻게 하나요?</h3>
                     <svg id="thin-x" viewBox="0 0 26 26" class="" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                 </div>
@@ -80,7 +77,7 @@
                 </p>
             </li>
             <li class="faq-5">
-                <div class="faq-5-q">
+                <div class="faq-5-q" onclick="contentOpen(4);">
                     <h3>넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?</h3>
                     <svg id="thin-x" viewBox="0 0 26 26" class="" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                 </div>
@@ -89,7 +86,7 @@
                 </p>
             </li>
             <li class="faq-6">
-                <div class="faq-6-q">
+                <div class="faq-6-q" onclick="contentOpen(5);">
                     <h3>무료 이용에 관히 자세히 알 수 있을까요?</h3>
                     <svg id="thin-x" viewBox="0 0 26 26" class="" focusable="true"><path d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
                 </div>
@@ -101,19 +98,45 @@
     </div>
 
 <script>
-    var openState = false;
 
-    function contentOpen() {
-        if(openState) {
-        document.getElementsByClassName('faq-1')[0].style = "height: 60px;";
-        document.getElementsByClassName('faq-1-svg')[0].style = "transform: rotate(45deg)";
-        openState = false;
+    //<이벤트 구현할 내용>
+    //페이지 열었을 때 아코디언 메뉴는 모두 닫혀 있는 상태(초기값)
+    //faq-ul li div를 클릭시
+    //-faq-ul li의 높이값이 커지고, svg가 회전하여 p가 보여짐
+    //-클릭된 div만 열리고, 다른 div는 닫힘
+    //-클릭했던 걸 다시 클릭하면 faq-ul li는 원래 높이값으로, svg도 원래 모양으로 돌아가고, p가 숨겨짐
+    //-조건문과 반복문 활용
+    
+    //1. false 값을 openState 변수에 할당하여 메뉴의 초기값을 모두 닫혀 있도록 함
+    var openState = [false,false,false,false,false,false];
+
+    //2. 메뉴를 조건에 따라 열고, 닫게 하는 함수를 만듦 
+    //3. 클릭 이벤트가 이루어지는 html div에 각각 인수를 넣어 contentOpen(); 함수를 호출하는 onclick 속성을 넣어줌 
+    //4. 함수에 target이라는 매개변수를 넣어 전달되는 인수에 따라 해당되는 부분이 실행되도록 반복문 작성
+    // - 클릭된 div의 전달된 인수와 일치하지 않는 것은 모두 닫히도록 함
+    // - 문서에 접근하여 클래스명이 다르더라도 querySelectorAll로 요소 선택하는 방법 그대로 불러와 해당요소에 
+    //   변경내용 적용함
+    //5. 실행된 후에는 변수값을 업데이트하여 열고, 닫히게 해줌
+    
+    function contentOpen(target) {
+            for(let i = 0; i < 6; i++) {//클릭되는 요소 갯수보다 적게 반복되는 반복문 작성
+                if(i != target) { //전달되는 인수와 일치하지 않는 것들은 모두 닫히도록
+                    document.querySelectorAll('.faq-ul li')[i].style = "max-height: 60px;";
+                    document.querySelectorAll('.faq-ul li svg')[i].style = "transform: rotate(45deg)";
+                    openState[i] = false;//조건 실행 후 닫혀진 요소에 변수값을 false로 업데이트 해줌
+                }
+            }
+
+        if(openState[target]) {
+        document.querySelectorAll('.faq-ul li')[target].style = "max-height: 60px;";
+        document.querySelectorAll('.faq-ul li svg')[target].style = "transform: rotate(45deg);";
+        openState[target] = false;//조건 실행 후 닫혀진 요소에 변수값을 false로 업데이트 해줌
         } else {
-        document.getElementsByClassName('faq-1')[0].style = "height: auto;";
-        document.getElementsByClassName('faq-1-svg')[0].style = "transform: rotate(0deg)";
-        openState = true;
+        document.querySelectorAll('.faq-ul li')[target].style = "max-height: 500px;";
+        document.querySelectorAll('.faq-ul li svg')[target].style = "transform: rotate(0deg)";
+        openState[target] = true;//조건 실행 후 열린 요소에 변수값을 true로 업데이트 해줌
         }
-        // 조건 실행 후 값 변경해줘서 상황에 따라서 열고 닫히게 해줌 
+    
     }
 </script>
 
